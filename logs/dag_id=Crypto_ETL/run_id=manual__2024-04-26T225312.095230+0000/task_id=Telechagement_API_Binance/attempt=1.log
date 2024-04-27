@@ -1,0 +1,26 @@
+[2024-04-26T22:53:14.808+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-26T22:53:14.837+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Crypto_ETL.Telechagement_API_Binance manual__2024-04-26T22:53:12.095230+00:00 [queued]>
+[2024-04-26T22:53:14.851+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Crypto_ETL.Telechagement_API_Binance manual__2024-04-26T22:53:12.095230+00:00 [queued]>
+[2024-04-26T22:53:14.852+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-04-26T22:53:14.871+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): Telechagement_API_Binance> on 2024-04-26 22:53:12.095230+00:00
+[2024-04-26T22:53:14.882+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=639) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-04-26T22:53:14.886+0000] {standard_task_runner.py:63} INFO - Started process 644 to run task
+[2024-04-26T22:53:14.886+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Crypto_ETL', 'Telechagement_API_Binance', 'manual__2024-04-26T22:53:12.095230+00:00', '--job-id', '133', '--raw', '--subdir', 'DAGS_FOLDER/processing_ETL.py', '--cfg-path', '/tmp/tmppyjk5deq']
+[2024-04-26T22:53:14.888+0000] {standard_task_runner.py:91} INFO - Job 133: Subtask Telechagement_API_Binance
+[2024-04-26T22:53:14.952+0000] {task_command.py:426} INFO - Running <TaskInstance: Crypto_ETL.Telechagement_API_Binance manual__2024-04-26T22:53:12.095230+00:00 [running]> on host 7542c54372fc
+[2024-04-26T22:53:15.067+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Crypto_ETL' AIRFLOW_CTX_TASK_ID='Telechagement_API_Binance' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T22:53:12.095230+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-26T22:53:12.095230+00:00'
+[2024-04-26T22:53:15.069+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-26T22:53:15.070+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-26T22:53:15.072+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "curl -o /tmp/download.json -L 'https://api.sampleapis.com/bitcoin/historical_prices'"]
+[2024-04-26T22:53:15.086+0000] {subprocess.py:86} INFO - Output:
+[2024-04-26T22:53:15.094+0000] {subprocess.py:93} INFO -   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2024-04-26T22:53:15.097+0000] {subprocess.py:93} INFO -                                  Dload  Upload   Total   Spent    Left  Speed
+[2024-04-26T22:53:15.313+0000] {subprocess.py:93} INFO -   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 15834  100 15834    0     0  72076      0 --:--:-- --:--:-- --:--:-- 72301
+[2024-04-26T22:53:15.317+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-04-26T22:53:15.318+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-26T22:53:15.344+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=Crypto_ETL, task_id=Telechagement_API_Binance, execution_date=20240426T225312, start_date=20240426T225314, end_date=20240426T225315
+[2024-04-26T22:53:15.383+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-26T22:53:15.412+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-04-26T22:53:15.415+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

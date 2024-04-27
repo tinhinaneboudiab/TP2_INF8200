@@ -1,0 +1,33 @@
+[2024-04-26T22:49:42.325+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-04-26T22:49:42.349+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Crypto_ETL.cleanBinance_File_Dataset manual__2024-04-26T22:49:39.551836+00:00 [queued]>
+[2024-04-26T22:49:42.361+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Crypto_ETL.cleanBinance_File_Dataset manual__2024-04-26T22:49:39.551836+00:00 [queued]>
+[2024-04-26T22:49:42.362+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2024-04-26T22:49:42.382+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): cleanBinance_File_Dataset> on 2024-04-26 22:49:39.551836+00:00
+[2024-04-26T22:49:42.394+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=543) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-04-26T22:49:42.394+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'Crypto_ETL', 'cleanBinance_File_Dataset', 'manual__2024-04-26T22:49:39.551836+00:00', '--job-id', '121', '--raw', '--subdir', 'DAGS_FOLDER/processing_ETL.py', '--cfg-path', '/tmp/tmpt6mvf04k']
+[2024-04-26T22:49:42.397+0000] {standard_task_runner.py:63} INFO - Started process 548 to run task
+[2024-04-26T22:49:42.398+0000] {standard_task_runner.py:91} INFO - Job 121: Subtask cleanBinance_File_Dataset
+[2024-04-26T22:49:42.470+0000] {task_command.py:426} INFO - Running <TaskInstance: Crypto_ETL.cleanBinance_File_Dataset manual__2024-04-26T22:49:39.551836+00:00 [running]> on host 7542c54372fc
+[2024-04-26T22:49:42.637+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Crypto_ETL' AIRFLOW_CTX_TASK_ID='cleanBinance_File_Dataset' AIRFLOW_CTX_EXECUTION_DATE='2024-04-26T22:49:39.551836+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-26T22:49:39.551836+00:00'
+[2024-04-26T22:49:42.641+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-04-26T22:49:42.670+0000] {python.py:237} INFO - Done. Returned value was:            Date    Price     Open  ...      Low   Volume ChangePercentFromLastMonth
+0    12/19/2023  42259.3  42659.7  ...  41842.7   55.29K                      -0.94
+1    12/18/2023  42659.7  41369.1  ...  40554.0   61.58K                       3.12
+2    12/17/2023  41368.7  42271.7  ...  41276.9   35.46K                      -2.14
+3    12/16/2023  42271.7  41929.0  ...  41698.2   30.11K                       0.82
+4    12/15/2023  41929.0  43025.2  ...  41697.9   45.28K                      -2.55
+..          ...      ...      ...  ...      ...      ...                        ...
+794  10/16/2021  60861.1  61669.2  ...  60161.9   49.93K                      -1.32
+795  10/15/2021  61672.5  57348.2  ...  56874.8  121.48K                       7.54
+796  10/14/2021  57345.8  57370.4  ...  56866.8   59.84K                      -0.06
+797  10/13/2021  57380.1  56014.5  ...  54314.4   73.62K                       2.44
+798  10/12/2021  56015.9  57480.6  ...  54155.4   74.85K                      -2.54
+
+[799 rows x 7 columns]
+[2024-04-26T22:49:42.735+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-04-26T22:49:42.803+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=Crypto_ETL, task_id=cleanBinance_File_Dataset, execution_date=20240426T224939, start_date=20240426T224942, end_date=20240426T224942
+[2024-04-26T22:49:42.855+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-04-26T22:49:42.885+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-04-26T22:49:42.888+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
